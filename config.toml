@@ -1,0 +1,15 @@
+baseURL = 'https://matchaxnb.github.io/berlin-2021-slides/'
+languageCode = 'en-us'
+title = 'Berlin Netlify-sennder slides and demo'
+
+theme = [ "hugo-notice", "diary" ]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
+
+
