@@ -1,0 +1,150 @@
+<!doctype html><html><head>
+<title>What Is Devops?</title>
+<meta charset=utf-8>
+<meta name=X-UA-Compatible content="IE=edge">
+<meta name=google-site-verification content>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport>
+<meta content="telephone=no" name=format-detection>
+<meta name=description content>
+<meta name=renderer content="webkit">
+<meta name=theme-color content="#ffffff">
+<link type=text/css rel=stylesheet href=/berlin-1121-slides/vendor/css/bootstrap.min.css>
+<link rel=stylesheet href=https://matchaxnb.github.io/berlin-1121-slides/scss/journal.min.3f72a5fc8f5b5dd732a4b476aced0eece2156958d9d414316494ddb10593ddf7.css integrity="sha256-P3Kl/I9bXdcypLR2rO0O7OIVaVjZ1BQxZJTdsQWT3fc=" media=screen>
+<link rel=stylesheet href=https://matchaxnb.github.io/berlin-1121-slides/scss/dark-mode.min.f7c2efa7183435a6bd1842f91c541481c7a5137b5991629a870f24e4a516ad4b.css integrity="sha256-98Lvpxg0Naa9GEL5HFQUgcelE3tZkWKahw8k5KUWrUs=" media=screen>
+<script src=/berlin-1121-slides/vendor/js/loadCSS.js></script>
+<script>loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons")</script>
+<script src=/berlin-1121-slides/js/toc.js></script>
+</head>
+<body>
+<div id=app><div id=sideContainer class=side-container>
+<a class="a-block nav-head false" href=https://matchaxnb.github.io/berlin-1121-slides/>
+<div class=nav-title>
+Berlin Netlify-sennder slides and demo
+</div>
+</a>
+<div class=nav-link-list>
+</div>
+<div class=nav-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+2021 Berlin Netlify-sennder slides and demo
+</div>
+</div><div id=extraContainer class=extra-container>
+<div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+</div>
+<div class=pagination>
+<a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }">
+<i class="material-icons pagination-action-icon">
+keyboard_arrow_up
+</i>
+</a>
+<a type=button class=pagination-action id=darkModeToggleButton>
+<span class="material-icons pagination-action-icon" id=darkModeToggleIcon>
+dark_mode
+</span>
+</a>
+</div>
+</div>
+<div class=single-column-drawer-container id=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+<div class=drawer-content>
+<div class=drawer-menu>
+<div class=toc>
+</div>
+</div>
+</div>
+</div>
+<transition name=fade>
+<div id=drawer-mask v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if=isDrawerOpen v-on:click=toggleDrawer></div>
+</transition>
+<nav id=navBar class="navbar sticky-top navbar-light single-column-nav-container">
+<div id=navBackground class=nav-background></div>
+<div class="container container-narrow nav-content">
+<button id=nav_dropdown_btn class=nav-dropdown-toggle type=button v-on:click=toggleDrawer>
+<i class=material-icons>
+menu
+</i>
+</button>
+<a id=navTitle class=navbar-brand href=https://matchaxnb.github.io/berlin-1121-slides/>
+Berlin Netlify-sennder slides and demo
+</a>
+<button type=button class=nav-darkmode-toggle id=darkModeToggleButton2>
+<i class=material-icons id=darkModeToggleIcon2>
+dark_mode
+</i>
+</button>
+</div>
+</nav>
+<div class=single-column-header-container id=pageHead v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+<a href=https://matchaxnb.github.io/berlin-1121-slides/>
+<div class=single-column-header-title>Berlin Netlify-sennder slides and demo</div>
+</a>
+</div>
+<div id=content>
+<div id=streamContainer class=stream-container>
+<div class="post-list-container post-list-container-shadow">
+<div class=post>
+<div class=post-head-wrapper-text-only>
+<div class=post-title>
+What Is Devops?
+<div class=post-meta>
+<time itemprop=datePublished>
+2021-11-22 14:58
+</time>
+</div>
+</div>
+</div>
+<div class=post-body-wrapper>
+<div class=post-body v-pre>
+<p>So, I&rsquo;m trying to summarize what DevOps is.</p>
+<style type=text/css>.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:#444;background:#e7f2fa}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:#fff;background:#6ab0de}.notice.warning .notice-title{background:rgba(217,83,79,.9)}.notice.warning{background:#fae2e2}.notice.info .notice-title{background:#f0b37e}.notice.info{background:#fff2db}.notice.note .notice-title{background:#6ab0de}.notice.note{background:#e7f2fa}.notice.tip .notice-title{background:rgba(92,184,92,.8)}.notice.tip{background:#e6f9e6}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}</style>
+<div><svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379.0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628.0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628.0l-22.627 22.627c-6.248 6.248-6.248 16.379.0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937.0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154.0l239.94 416.028zM288 354c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196.0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627.0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627.0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627.0 12 5.373 12 12v1e2h12c6.627.0 12 5.373 12 12v24z"/></symbol></svg></div><div class="notice info">
+<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#info-notice"/></svg></span>Info</p><p>I&rsquo;m not trying to be objective here, this is mostly me trying to sort what&rsquo;s in our head regarding DevOps.</p></div>
+<p>So, what is DevOps?</p>
+<ul>
+<li>the result of applying agile methodology to a broader scope than just software development but the entire lifecycle of computer engineering</li>
+<li>praxis: by doing it you become better at it and you have an impact (cultural and technical) on your org and environment</li>
+</ul>
+<p>What is DevOps about?</p>
+<ul>
+<li>DevOps has very much to do with the open source culture, collaboration and rapid innovation</li>
+<li>Focus, efficiency, doing what you&rsquo;re best at (your part of the value stream)</li>
+<li>Removing walls and abolishing silos across engineering value streams so there is less &ldquo;Us&rdquo; and &ldquo;Them&rdquo; (this is especially true for knowledge silos)</li>
+</ul>
+<p>What is DevOps made of?</p>
+<ul>
+<li>Various methods and practices stemming from Agile frameworks that all endeavor to manage software lifecycle end-to-end and continuously</li>
+<li>Many different toolchains to assist and enable each step of the software lifecycle</li>
+<li>A number of philosophical positions about software lifecycle</li>
+</ul>
+<hr width=100% id=EOF>
+<p style=color:#777>Last modified on 2021-11-22</p>
+</div>
+</div>
+<nav class=post-pagination>
+<a class=newer-posts href=https://matchaxnb.github.io/berlin-1121-slides/slides/what-is-devops/>
+Next<br>
+</a>
+<a class=older-posts>
+Previous<br>No older posts.
+</a>
+</nav>
+<div class=post-comment-wrapper>
+</div>
+</div>
+</div>
+</div>
+</div><div id=single-column-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+2021 Berlin Netlify-sennder slides and demo
+</div>
+</div>
+<script src=/berlin-1121-slides/js/journal.js></script>
+</body>
+</html>

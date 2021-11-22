@@ -1,0 +1,239 @@
+<!doctype html><html><head>
+<title></title>
+<meta charset=utf-8>
+<meta name=X-UA-Compatible content="IE=edge">
+<meta name=google-site-verification content>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport>
+<meta content="telephone=no" name=format-detection>
+<meta name=description content>
+<meta name=renderer content="webkit">
+<meta name=theme-color content="#ffffff">
+<link type=text/css rel=stylesheet href=/berlin-1121-slides/vendor/css/bootstrap.min.css>
+<link rel=stylesheet href=https://matchaxnb.github.io/berlin-1121-slides/scss/journal.min.3f72a5fc8f5b5dd732a4b476aced0eece2156958d9d414316494ddb10593ddf7.css integrity="sha256-P3Kl/I9bXdcypLR2rO0O7OIVaVjZ1BQxZJTdsQWT3fc=" media=screen>
+<link rel=stylesheet href=https://matchaxnb.github.io/berlin-1121-slides/scss/dark-mode.min.f7c2efa7183435a6bd1842f91c541481c7a5137b5991629a870f24e4a516ad4b.css integrity="sha256-98Lvpxg0Naa9GEL5HFQUgcelE3tZkWKahw8k5KUWrUs=" media=screen>
+<script src=/berlin-1121-slides/vendor/js/loadCSS.js></script>
+<script>loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons")</script>
+<script src=/berlin-1121-slides/js/toc.js></script>
+</head>
+<body>
+<div id=app><div id=sideContainer class=side-container>
+<a class="a-block nav-head false" href=https://matchaxnb.github.io/berlin-1121-slides/>
+<div class=nav-title>
+Berlin Netlify-sennder slides and demo
+</div>
+</a>
+<div class=nav-link-list>
+</div>
+<div class=nav-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+2021 Berlin Netlify-sennder slides and demo
+</div>
+</div><div id=extraContainer class=extra-container>
+<div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+<div class=toc-content>
+<center>- CATALOG -</center>
+<ul>
+<li>
+<a href=#what-is-devops onclick="onNavClick(`#what-is-devops-nav`)" id=what-is-devops-nav>
+What is DevOps
+</a>
+</li>
+<li>
+<a href=#the-goal-of-devops onclick="onNavClick(`#the-goal-of-devops-nav`)" id=the-goal-of-devops-nav>
+The Goal of DevOps
+</a>
+</li>
+<ul>
+<ul>
+<li>
+<a href=#two-representations-of-software-value-streams-courtesy-amazon--microsoft onclick="onNavClick(`#two-representations-of-software-value-streams-courtesy-amazon--microsoft-nav`)" id=two-representations-of-software-value-streams-courtesy-amazon--microsoft-nav>
+Two representations of software value streams, courtesy Amazon & Microsoft
+</a>
+</li>
+</ul>
+</ul>
+<li>
+<a href=#where-does-devops-happen onclick="onNavClick(`#where-does-devops-happen-nav`)" id=where-does-devops-happen-nav>
+Where does DevOps happen?
+</a>
+</li>
+<li>
+<a href=#the-philosophy-of-devops onclick="onNavClick(`#the-philosophy-of-devops-nav`)" id=the-philosophy-of-devops-nav>
+The Philosophy of DevOps
+</a>
+</li>
+<ul>
+<ul>
+<li>
+<a href=#-countdown-autostartyes-time60countdown--how-much-time-do-you-have onclick="onNavClick(`#-countdown-autostartyes-time60countdown--how-much-time-do-you-have-nav`)" id=-countdown-autostartyes-time60countdown--how-much-time-do-you-have-nav>
+⏳️ | how much time do you have?
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class=pagination>
+<a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }">
+<i class="material-icons pagination-action-icon">
+keyboard_arrow_up
+</i>
+</a>
+<a type=button class=pagination-action id=darkModeToggleButton>
+<span class="material-icons pagination-action-icon" id=darkModeToggleIcon>
+dark_mode
+</span>
+</a>
+</div>
+</div>
+<div class=single-column-drawer-container id=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+<div class=drawer-content>
+<div class=drawer-menu>
+<div class=toc>
+<div class=toc-content>
+<center>- CATALOG -</center>
+<ul>
+<li>
+<a href=#what-is-devops onclick="onNavClick(`#what-is-devops-nav`)" id=what-is-devops-nav>
+What is DevOps
+</a>
+</li>
+<li>
+<a href=#the-goal-of-devops onclick="onNavClick(`#the-goal-of-devops-nav`)" id=the-goal-of-devops-nav>
+The Goal of DevOps
+</a>
+</li>
+<ul>
+<ul>
+<li>
+<a href=#two-representations-of-software-value-streams-courtesy-amazon--microsoft onclick="onNavClick(`#two-representations-of-software-value-streams-courtesy-amazon--microsoft-nav`)" id=two-representations-of-software-value-streams-courtesy-amazon--microsoft-nav>
+Two representations of software value streams, courtesy Amazon & Microsoft
+</a>
+</li>
+</ul>
+</ul>
+<li>
+<a href=#where-does-devops-happen onclick="onNavClick(`#where-does-devops-happen-nav`)" id=where-does-devops-happen-nav>
+Where does DevOps happen?
+</a>
+</li>
+<li>
+<a href=#the-philosophy-of-devops onclick="onNavClick(`#the-philosophy-of-devops-nav`)" id=the-philosophy-of-devops-nav>
+The Philosophy of DevOps
+</a>
+</li>
+<ul>
+<ul>
+<li>
+<a href=#-countdown-autostartyes-time60countdown--how-much-time-do-you-have onclick="onNavClick(`#-countdown-autostartyes-time60countdown--how-much-time-do-you-have-nav`)" id=-countdown-autostartyes-time60countdown--how-much-time-do-you-have-nav>
+⏳️ | how much time do you have?
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<transition name=fade>
+<div id=drawer-mask v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if=isDrawerOpen v-on:click=toggleDrawer></div>
+</transition>
+<nav id=navBar class="navbar sticky-top navbar-light single-column-nav-container">
+<div id=navBackground class=nav-background></div>
+<div class="container container-narrow nav-content">
+<button id=nav_dropdown_btn class=nav-dropdown-toggle type=button v-on:click=toggleDrawer>
+<i class=material-icons>
+menu
+</i>
+</button>
+<a id=navTitle class=navbar-brand href=https://matchaxnb.github.io/berlin-1121-slides/>
+Berlin Netlify-sennder slides and demo
+</a>
+<button type=button class=nav-darkmode-toggle id=darkModeToggleButton2>
+<i class=material-icons id=darkModeToggleIcon2>
+dark_mode
+</i>
+</button>
+</div>
+</nav>
+<div class=single-column-header-container id=pageHead v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+<a href=https://matchaxnb.github.io/berlin-1121-slides/>
+<div class=single-column-header-title>Berlin Netlify-sennder slides and demo</div>
+</a>
+</div>
+<div id=content>
+<div id=streamContainer class=stream-container>
+<div class="post-list-container post-list-container-shadow">
+<div class=post>
+<div class=post-head-wrapper-text-only>
+<div class=post-title>
+<div class=post-meta>
+</div>
+</div>
+</div>
+<div class=post-body-wrapper>
+<div class=post-body v-pre>
+<h1 id=what-is-devops>What is DevOps</h1>
+<h2 id=hahahugoshortcode-s0-hbhb>
+<span class=fragment>🛠️ Tools</span>
+</h2>
+<h2 id=hahahugoshortcode-s1-hbhb>
+<span class=fragment>👷 Praxis</span>
+</h2>
+<h2 id=hahahugoshortcode-s2-hbhb>
+<span class=fragment>🐍 Philosophy</span>
+</h2>
+<hr>
+<h1 id=the-goal-of-devops>The Goal of DevOps</h1>
+<p><figure class=ib><img src=https://d1.awsstatic.com/product-marketing/DevOps/DevOps_feedback-diagram.ff668bfc299abada00b2dcbdc9ce2389bd3dce3f.png height=100x>
+</figure>
+<figure class=ib><img src=https://azurecomcdn.azureedge.net/cvt-77f94256f1c090f65c1a7a723791f2b6776f142767230e7a53a61deadacd009a/images/page/overview/devops/index/lifecycle.png height=250x>
+</figure>
+</p>
+<h3 id=two-representations-of-software-value-streams-courtesy-amazon--microsoft>Two representations of software value streams, courtesy Amazon & Microsoft</h3>
+<hr>
+<h1 id=where-does-devops-happen>Where does DevOps happen?</h1>
+<p>🌍️</p>
+<span class=fragment><p>In the Software industry</p>
+</span>
+<span class=fragment><p>Everywhere software is built and operated</p>
+</span>
+<span class=fragment><p>In organizations of all sizes</p>
+</span>
+<hr>
+<h1 id=the-philosophy-of-devops>The Philosophy of DevOps</h1>
+<h3 id=-countdown-autostartyes-time60countdown--how-much-time-do-you-have>⏳️ <countdown autostart=yes time=60></countdown> | how much time do you have?</h3>
+<h2 id=hahahugoshortcode-s8-hbhb>
+<span class=fragment>Cultural philosophy</span>
+</h2>
+<span class=fragment>DevOps is a cultural philosophy. It&rsquo;s about fish and chips.</span>
+</div>
+</div>
+<nav class=post-pagination>
+<a class=newer-posts href=https://matchaxnb.github.io/berlin-1121-slides/slides/icebreaker/>
+Next<br>
+</a>
+<a class=older-posts href=https://matchaxnb.github.io/berlin-1121-slides/posts/what-is-devops/>
+Previous<br>What Is Devops?
+</a>
+</nav>
+<div class=post-comment-wrapper>
+</div>
+</div>
+</div>
+</div>
+</div><div id=single-column-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+2021 Berlin Netlify-sennder slides and demo
+</div>
+</div>
+<script src=/berlin-1121-slides/js/journal.js></script>
+</body>
+</html>
