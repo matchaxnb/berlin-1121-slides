@@ -2,7 +2,7 @@
 title = "DevOps Workshop - November 2021 - Berlin"
 description = "DevOps workshop given by Matcha and Yangdi on 2021/11/29 @sennder"
 date = "2021-11-22T15:30:22+01:00"
-draft = true
+draft = false
 theme = [ "hugo-notice", "reveal-hugo" ]
 outputs = ["Reveal"]
 [reveal_hugo]

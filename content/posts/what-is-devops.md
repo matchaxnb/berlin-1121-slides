@@ -1,7 +1,7 @@
 ---
 title: "What Is Devops?"
 date: 2021-11-22T14:58:14+01:00
-draft: true
+draft: false
 ---
 
 So, I'm trying to summarize what DevOps is.
