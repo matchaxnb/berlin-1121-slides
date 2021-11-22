@@ -1,0 +1,44 @@
+@import "reveal-js/css/theme/template/mixins";
+@import "reveal-js/css/theme/template/settings";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+$mainColor: #fff;
+$headingColor: #fff;
+$backgroundColor: rgb(255, 131, 0);
+$mainFont: "Open Sans", sans-serif;
+$headingFont: "Open Sans", sans-serif;
+
+$mainFontSize: 30px;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: small-caps;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+@import "reveal-js/css/theme/template/theme";
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+.reveal pre {
+	margin: 50px auto;
+}
+
+.reveal .ib img {
+	background-color: rgba(255,255,255,0.9);
+}
+h3 {
+	text-align: left;
+}
+@import "reveal-js/css/theme/template/mixins";
+@import "reveal-js/css/theme/template/settings";
