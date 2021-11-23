@@ -7,6 +7,13 @@ theme = [ "hugo-notice", "reveal-hugo" ]
 outputs = ["Reveal"]
 [reveal_hugo]
 plugins = ["plugin/countdown/countdown.js"]
+[reveal_hugo.templates.icebreaker]
+background = "#19B5FE"
+transition = "zoom"
+[reveal_hugo.templates.devops_intro]
+background = "#26C281"
+transition = "convex"
+color = "#EEEEEE"
 +++
 
 # DevOps Workshop
@@ -18,10 +25,10 @@ plugins = ["plugin/countdown/countdown.js"]
 
 # Program
 
-### 👋 {{% fragment %}}15 min | let's get acquainted... and also, what is DevOps?{{% /fragment %}}
-
-### 👷 {{% fragment %}}50 min | workshop: let's build and publish a website and form a community!{{% /fragment %}}
-
-### 💡 {{% fragment %}}10 min | Ask us anything!{{% /fragment %}}
-
-### ❔ {{% fragment %}}10 min | Quiz (awesome prizes to be expected)‽{{% /fragment %}}
+### {{% fragment %}}👋 15 min | let's get acquainted... and also, what is DevOps?{{% /fragment %}}
+                
+### {{% fragment %}}👷 50 min | workshop: let's build and publish a website and form a community!{{% /fragment %}}
+                
+### {{% fragment %}}💡 10 min | Ask us anything!{{% /fragment %}}
+                
+### {{% fragment %}}❔ 10 min | Quiz (awesome prizes to be expected)‽{{% /fragment %}}

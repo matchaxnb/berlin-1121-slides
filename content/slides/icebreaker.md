@@ -1,12 +1,13 @@
 +++
 weight = 10
 +++
-
+{{<slide template="icebreaker">}}
 # 🧊 Icebreaker
 
 ## Crew Members - ⏳️ 10 min
 
 ---
+{{<slide template="icebreaker">}}
 
 # Crew Members
 
@@ -24,6 +25,7 @@ You can also customize your team.
 Let's share our findings!
 
 ---
+{{<slide template="icebreaker">}}
 
 # Form groups
 
@@ -35,6 +37,7 @@ Let's share our findings!
 #
 # ⏳️ <countdown time="60" autostart="yes" />
 ---
+{{<slide template="icebreaker">}}
 
 # Assign positions
 
@@ -46,6 +49,7 @@ Let's share our findings!
 # ⏳️ <countdown time="240" autostart="yes" />
 
 ---
+{{<slide template="icebreaker">}}
 # Let's share
 
 
