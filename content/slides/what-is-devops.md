@@ -96,5 +96,7 @@ As an engineer in a DevOps organization:
 ---
 {{<slide template="devops_intro">}}
 # The Tools of DevOps
+## Engineers use 
+<p class="r-fit-text">TOOLS</p>
 
-<p class="r-fit-text">Engineers use tools</p>
+What for?
