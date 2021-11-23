@@ -1,9 +1,12 @@
 [submodule "themes/reveal-hugo"]
 	path = themes/reveal-hugo
-	url = git@github.com:dzello/reveal-hugo.git
+	# url = git@github.com:dzello/reveal-hugo.git
+  url = https://github.com/veggiemonk/reveal-hugo.git
 [submodule "themes/diary"]
 	path = themes/diary
 	url = https://github.com/AmazingRise/hugo-theme-diary.git
 [submodule "themes/hugo-notice"]
 	path = themes/hugo-notice
 	url = https://github.com/martignoni/hugo-notice.git
+[submodule "reveal-hugo"]
+	branch = reveal-v4

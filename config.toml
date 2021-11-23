@@ -20,5 +20,8 @@ theme = "white"
 template = "sennder"
 custom_theme = "custom-theme.scss"
 custom_theme_compile = true
+center = false
+reveal_cdn = "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.0"
 [params.logo]
 src = "sennder-logo-h.png"
+
