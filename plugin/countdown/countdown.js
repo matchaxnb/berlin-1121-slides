@@ -7,8 +7,9 @@
 var RevealCountDown =
   window.RevealCountDown ||
   (function() {
-    var options = Reveal.getConfig().countdown || {};
+    var options = {} // Reveal.getConfig().countdown || {};
 
+    var id = 'plugin/countdown/countdown.js'
     var defaultOptions = {
       defaultTime: 300,
       autostart: "no",
@@ -37,40 +38,41 @@ var RevealCountDown =
     var elapsedTime = 0;
     var running = false;
 
-    Reveal.addEventListener("slidechanged", function(event) {
-      initCountDown(event.currentSlide);
-    });
+    var initPlugin = () => {
+      Reveal.addEventListener("slidechanged", function(event) {
+        initCountDown(event.currentSlide);
+      });
 
-    // If timer is on first slide start on ready
-    Reveal.addEventListener("ready", function(event) {
-      initCountDown(event.currentSlide);
-    });
+      // If timer is on first slide start on ready
+      Reveal.addEventListener("ready", function(event) {
+        initCountDown(event.currentSlide);
+      });
 
-    Reveal.addKeyBinding(
-      { keyCode: 84, key: "T", description: "Pause/Unpause timer" },
-      function() {
-        togglePauseTimer();
-      }
-    );
+      Reveal.addKeyBinding(
+        { keyCode: 84, key: "T", description: "Pause/Unpause timer" },
+        function() {
+          togglePauseTimer();
+        }
+      );
 
-    Reveal.addKeyBinding(
-      {
-        keyCode: 187,
-        key: "+",
-        description: "Increase timer with tDelta seconds"
-      },
-      increaseTime
-    );
+      Reveal.addKeyBinding(
+        {
+          keyCode: 187,
+          key: "+",
+          description: "Increase timer with tDelta seconds"
+        },
+        increaseTime
+      );
 
-    Reveal.addKeyBinding(
-      {
-        keyCode: 189,
-        key: "-",
-        description: "Decrease time with tDelta seconds"
-      },
-      decreseTime
-    );
-
+      Reveal.addKeyBinding(
+        {
+          keyCode: 189,
+          key: "-",
+          description: "Decrease time with tDelta seconds"
+        },
+        decreseTime
+      );
+    }
     function updateTimer(timeLeft) {
       if (counterRef === null) return;
       secondsLeft = timeLeft;
@@ -135,8 +137,11 @@ var RevealCountDown =
     }
 
     return {
-      init: function() {}
+      id: 'plugin/countdown/countdown.js',
+      init: initPlugin,
     };
   })();
 
-Reveal.registerPlugin("countdown", RevealCountDown);
+// Reveal.registerPlugin("countdown", RevealCountDown);
+Reveal.registerPlugin(RevealCountDown)
+// export default () => RevealCountDown;
