@@ -55,6 +55,4 @@ Let's share our findings!
 
 # ⏳️ <countdown time="300" autostart="yes" />
 
-Want to use this icebreaker? 
-
-[https://tinyurl.com/crew-icebreaker](https://tinyurl.com/crew-icebreaker)
+Want to use this icebreaker? Get it here! [https://tinyurl.com/crew-icebreaker](https://tinyurl.com/crew-icebreaker)
