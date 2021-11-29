@@ -25,6 +25,7 @@ transition = "convex"
 2021/11/29 - Berlin 🐻
 
 {{<figure src="us2.png" alt="Yangdi and Matcha" height="400">}}
+
 ---
 
 # Program
@@ -36,3 +37,9 @@ transition = "convex"
 ### {{% fragment %}}💡 10 min | Ask us anything!{{% /fragment %}}
                 
 ### {{% fragment %}}❔ 10 min | Quiz (awesome prizes to be expected)‽{{% /fragment %}}
+
+---
+
+# Source code
+
+Source code for this presentation is here: [https://github.com/matchaxnb/berlin-1121-slides/](https://github.com/matchaxnb/berlin-1121-slides/).
