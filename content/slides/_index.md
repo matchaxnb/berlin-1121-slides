@@ -14,6 +14,9 @@ transition = "zoom"
 background = "#26C281"
 transition = "convex"
 color = "#EEEEEE"
+[reveal_hugo.templates.devops_ws]
+background = "#ebc83f"
+transition = "convex"
 +++
 
 # DevOps Workshop
@@ -21,6 +24,7 @@ color = "#EEEEEE"
 
 2021/11/29 - Berlin 🐻
 
+{{<figure src="us2.png" alt="Yangdi and Matcha" height="400">}}
 ---
 
 # Program

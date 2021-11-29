@@ -100,3 +100,47 @@ As an engineer in a DevOps organization:
 <p class="r-fit-text">TOOLS</p>
 
 What for?
+
+---
+{{<slide template="devops_intro">}}
+# The Tools of DevOps
+
+- Unit testing automation (verify that a program procedure fills its contract)
+- Integration testing automation (verify that a software component interacts properly with the others)
+- Deployment and delivery automation (push things to the customers)
+- Infrastructure As Code (treat infrastructure, like servers, as code and configure them this way)
+- Docs As Code (docs as a first-class citizen, living among the code and following the same lifecycle)
+- Code Quality assessment (measure code smells, respect of best practices, ...)
+- Team Efficiency metrics (Lead time, mean time to recovery, ...)
+- ...
+
+---
+{{<slide template="devops_intro">}}
+# The Tools of DevOps
+
+Most DevOps tools are about
+
+# Automation
+
+and
+
+# Measurement
+
+This is because
+
+## your time is precious
+
+and
+
+## knowledge is power
+
+
+---
+{{<slide template="devops_intro">}}
+# The Tools of DevOps
+
+I will not make a catalog of all existing tools or attempt to do so.
+
+The best tools are the ones you use and that go with your flow.
+
+Like Agile, DevOps is, in the end, about flow. DevOps tools are enablers for that. They allow you to focus on what matters to you.
