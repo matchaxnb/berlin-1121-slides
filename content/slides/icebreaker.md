@@ -57,4 +57,4 @@ Let's share our findings!
 
 Want to use this icebreaker? Get it here! [https://tinyurl.com/crew-icebreaker](https://tinyurl.com/crew-icebreaker)
 
-{{<figure src="miroqr.png" height="100">}}
+{{<figure src="miroqr.png" height="200">}}
