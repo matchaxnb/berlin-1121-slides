@@ -1,0 +1,658 @@
+<!doctype html><html><head>
+<title></title>
+<meta charset=utf-8>
+<meta name=X-UA-Compatible content="IE=edge">
+<meta name=google-site-verification content>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport>
+<meta content="telephone=no" name=format-detection>
+<meta name=description content>
+<meta name=renderer content="webkit">
+<meta name=theme-color content="#ffffff">
+<link type=text/css rel=stylesheet href=/berlin-1121-slides/vendor/css/bootstrap.min.css>
+<link rel=stylesheet href=https://matchaxnb.github.io/berlin-1121-slides/scss/journal.min.3f72a5fc8f5b5dd732a4b476aced0eece2156958d9d414316494ddb10593ddf7.css integrity="sha256-P3Kl/I9bXdcypLR2rO0O7OIVaVjZ1BQxZJTdsQWT3fc=" media=screen>
+<link rel=stylesheet href=https://matchaxnb.github.io/berlin-1121-slides/scss/dark-mode.min.f7c2efa7183435a6bd1842f91c541481c7a5137b5991629a870f24e4a516ad4b.css integrity="sha256-98Lvpxg0Naa9GEL5HFQUgcelE3tZkWKahw8k5KUWrUs=" media=screen>
+<script src=/berlin-1121-slides/vendor/js/loadCSS.js></script>
+<script>loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons")</script>
+<script src=/berlin-1121-slides/js/toc.js></script>
+</head>
+<body>
+<div id=app><div id=sideContainer class=side-container>
+<a class="a-block nav-head false" href=https://matchaxnb.github.io/berlin-1121-slides/>
+<div class=nav-title>
+Berlin Netlify-sennder slides and demo
+</div>
+</a>
+<div class=nav-link-list>
+</div>
+<div class=nav-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+2021 Berlin Netlify-sennder slides and demo
+</div>
+</div><div id=extraContainer class=extra-container>
+<div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+<div class=toc-content>
+<center>- CATALOG -</center>
+<ul>
+<li>
+<a href=#workshop onclick="onNavClick(`#workshop-nav`)" id=workshop-nav>
+Workshop
+</a>
+</li>
+<li>
+<a href=#build-your-own-website onclick="onNavClick(`#build-your-own-website-nav`)" id=build-your-own-website-nav>
+Build Your Own Website
+</a>
+</li>
+<li>
+<a href=#workshop-1 onclick="onNavClick(`#workshop-1-nav`)" id=workshop-1-nav>
+Workshop
+</a>
+</li>
+<ul>
+<li>
+<a href=#were-all-gonna-create-an-open-source-personal-website onclick="onNavClick(`#were-all-gonna-create-an-open-source-personal-website-nav`)" id=were-all-gonna-create-an-open-source-personal-website-nav>
+We’re all gonna create an open source personal website
+</a>
+</li>
+<li>
+<a href=#we-will-build-it-with-hugohttpsgohugoio-a-static-website-generator onclick="onNavClick(`#we-will-build-it-with-hugohttpsgohugoio-a-static-website-generator-nav`)" id=we-will-build-it-with-hugohttpsgohugoio-a-static-website-generator-nav>
+We will build it with Hugo, a static website generator
+</a>
+</li>
+<li>
+<a href=#we-will-host-it-on-github-pageshttpspagesgithubcom-for-free onclick="onNavClick(`#we-will-host-it-on-github-pageshttpspagesgithubcom-for-free-nav`)" id=we-will-host-it-on-github-pageshttpspagesgithubcom-for-free-nav>
+We will host it on GitHub Pages for free
+</a>
+</li>
+<li>
+<a href=#we-will-automate-it-all-with-github-actionshttpsgithubcomfeaturesactions-for-free onclick="onNavClick(`#we-will-automate-it-all-with-github-actionshttpsgithubcomfeaturesactions-for-free-nav`)" id=we-will-automate-it-all-with-github-actionshttpsgithubcomfeaturesactions-for-free-nav>
+We will automate it all with GitHub Actions for free
+</a>
+</li>
+<ul>
+<li>
+<a href=#for-the-contents-i-propose-a-selection-of-poemshttpstinyurlcompoems-b2021 onclick="onNavClick(`#for-the-contents-i-propose-a-selection-of-poemshttpstinyurlcompoems-b2021-nav`)" id=for-the-contents-i-propose-a-selection-of-poemshttpstinyurlcompoems-b2021-nav>
+For the contents, I propose a selection of poems.
+</a>
+</li>
+</ul>
+</ul>
+<li>
+<a href=#workshop-2 onclick="onNavClick(`#workshop-2-nav`)" id=workshop-2-nav>
+Workshop
+</a>
+</li>
+<li>
+<a href=#get-your-computers onclick="onNavClick(`#get-your-computers-nav`)" id=get-your-computers-nav>
+Get your computers
+</a>
+</li>
+<li>
+<a href=#workshop-3 onclick="onNavClick(`#workshop-3-nav`)" id=workshop-3-nav>
+Workshop
+</a>
+</li>
+<li>
+<a href=#lets-download-tools onclick="onNavClick(`#lets-download-tools-nav`)" id=lets-download-tools-nav>
+Let’s download tools
+</a>
+</li>
+<ul>
+<li>
+<a href=#create-a-github-repository-for-your-website onclick="onNavClick(`#create-a-github-repository-for-your-website-nav`)" id=create-a-github-repository-for-your-website-nav>
+Create a GitHub repository for your website
+</a>
+</li>
+</ul>
+<li>
+<a href=#if-you-dont-have-a-github-account onclick="onNavClick(`#if-you-dont-have-a-github-account-nav`)" id=if-you-dont-have-a-github-account-nav>
+If you don’t have a GitHub account
+</a>
+</li>
+<li>
+<a href=#create-a-local-repository onclick="onNavClick(`#create-a-local-repository-nav`)" id=create-a-local-repository-nav>
+Create a local repository
+</a>
+</li>
+<li>
+<a href=#bootstrapping-hugo onclick="onNavClick(`#bootstrapping-hugo-nav`)" id=bootstrapping-hugo-nav>
+Bootstrapping Hugo
+</a>
+</li>
+<ul>
+<li>
+<a href=#open-the-newly-created-folder-in-your-ide onclick="onNavClick(`#open-the-newly-created-folder-in-your-ide-nav`)" id=open-the-newly-created-folder-in-your-ide-nav>
+Open the newly created folder in your IDE.
+</a>
+</li>
+<li>
+<a href=#open-a-terminal-in-that-directory-vs-code-right-click---open-in-integrated-terminal onclick="onNavClick(`#open-a-terminal-in-that-directory-vs-code-right-click---open-in-integrated-terminal-nav`)" id=open-a-terminal-in-that-directory-vs-code-right-click---open-in-integrated-terminal-nav>
+Open a terminal in that directory (VS Code: right click -> open in integrated terminal)
+</a>
+</li>
+<li>
+<a href=#run-this-simple-command onclick="onNavClick(`#run-this-simple-command-nav`)" id=run-this-simple-command-nav>
+Run this simple command
+</a>
+</li>
+</ul>
+<li>
+<a href=#install-a-hugo-theme-skin onclick="onNavClick(`#install-a-hugo-theme-skin-nav`)" id=install-a-hugo-theme-skin-nav>
+Install a Hugo theme (skin)
+</a>
+</li>
+<li>
+<a href=#install-the-diary-theme onclick="onNavClick(`#install-the-diary-theme-nav`)" id=install-the-diary-theme-nav>
+Install the Diary theme
+</a>
+</li>
+<ul>
+<li>
+<a href=#in-the-terminal-run-the-following-command onclick="onNavClick(`#in-the-terminal-run-the-following-command-nav`)" id=in-the-terminal-run-the-following-command-nav>
+In the terminal, run the following command
+</a>
+</li>
+<li>
+<a href=#tweak-the-configtoml-file onclick="onNavClick(`#tweak-the-configtoml-file-nav`)" id=tweak-the-configtoml-file-nav>
+Tweak the config.toml file
+</a>
+</li>
+</ul>
+<li>
+<a href=#lets-see-how-it-looks onclick="onNavClick(`#lets-see-how-it-looks-nav`)" id=lets-see-how-it-looks-nav>
+Let’s see how it looks
+</a>
+</li>
+<li>
+<a href=#publish-the-code onclick="onNavClick(`#publish-the-code-nav`)" id=publish-the-code-nav>
+Publish the code
+</a>
+</li>
+<ul>
+<li>
+<a href=#committing onclick="onNavClick(`#committing-nav`)" id=committing-nav>
+Committing
+</a>
+</li>
+</ul>
+<li>
+<a href=#publish-the-code-1 onclick="onNavClick(`#publish-the-code-1-nav`)" id=publish-the-code-1-nav>
+Publish the code
+</a>
+</li>
+<ul>
+<li>
+<a href=#pushing onclick="onNavClick(`#pushing-nav`)" id=pushing-nav>
+Pushing
+</a>
+</li>
+</ul>
+<li>
+<a href=#publishing-the-website-in-its-true-form onclick="onNavClick(`#publishing-the-website-in-its-true-form-nav`)" id=publishing-the-website-in-its-true-form-nav>
+Publishing the website in its true form
+</a>
+</li>
+<li>
+<a href=#actually-seeing-the-website onclick="onNavClick(`#actually-seeing-the-website-nav`)" id=actually-seeing-the-website-nav>
+Actually seeing the website
+</a>
+</li>
+<li>
+<a href=#adding-contents onclick="onNavClick(`#adding-contents-nav`)" id=adding-contents-nav>
+Adding contents
+</a>
+</li>
+<ul>
+<li>
+<a href=#an-about-me-page onclick="onNavClick(`#an-about-me-page-nav`)" id=an-about-me-page-nav>
+An about me page
+</a>
+</li>
+</ul>
+<li>
+<a href=#adding-moar-contents onclick="onNavClick(`#adding-moar-contents-nav`)" id=adding-moar-contents-nav>
+Adding moar contents
+</a>
+</li>
+<ul>
+<li>
+<a href=#queer-and-feminist-poems onclick="onNavClick(`#queer-and-feminist-poems-nav`)" id=queer-and-feminist-poems-nav>
+Queer and feminist poems
+</a>
+</li>
+</ul>
+<li>
+<a href=#going-further onclick="onNavClick(`#going-further-nav`)" id=going-further-nav>
+Going further
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class=pagination>
+<a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }">
+<i class="material-icons pagination-action-icon">
+keyboard_arrow_up
+</i>
+</a>
+<a type=button class=pagination-action id=darkModeToggleButton>
+<span class="material-icons pagination-action-icon" id=darkModeToggleIcon>
+dark_mode
+</span>
+</a>
+</div>
+</div>
+<div class=single-column-drawer-container id=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+<div class=drawer-content>
+<div class=drawer-menu>
+<div class=toc>
+<div class=toc-content>
+<center>- CATALOG -</center>
+<ul>
+<li>
+<a href=#workshop onclick="onNavClick(`#workshop-nav`)" id=workshop-nav>
+Workshop
+</a>
+</li>
+<li>
+<a href=#build-your-own-website onclick="onNavClick(`#build-your-own-website-nav`)" id=build-your-own-website-nav>
+Build Your Own Website
+</a>
+</li>
+<li>
+<a href=#workshop-1 onclick="onNavClick(`#workshop-1-nav`)" id=workshop-1-nav>
+Workshop
+</a>
+</li>
+<ul>
+<li>
+<a href=#were-all-gonna-create-an-open-source-personal-website onclick="onNavClick(`#were-all-gonna-create-an-open-source-personal-website-nav`)" id=were-all-gonna-create-an-open-source-personal-website-nav>
+We’re all gonna create an open source personal website
+</a>
+</li>
+<li>
+<a href=#we-will-build-it-with-hugohttpsgohugoio-a-static-website-generator onclick="onNavClick(`#we-will-build-it-with-hugohttpsgohugoio-a-static-website-generator-nav`)" id=we-will-build-it-with-hugohttpsgohugoio-a-static-website-generator-nav>
+We will build it with Hugo, a static website generator
+</a>
+</li>
+<li>
+<a href=#we-will-host-it-on-github-pageshttpspagesgithubcom-for-free onclick="onNavClick(`#we-will-host-it-on-github-pageshttpspagesgithubcom-for-free-nav`)" id=we-will-host-it-on-github-pageshttpspagesgithubcom-for-free-nav>
+We will host it on GitHub Pages for free
+</a>
+</li>
+<li>
+<a href=#we-will-automate-it-all-with-github-actionshttpsgithubcomfeaturesactions-for-free onclick="onNavClick(`#we-will-automate-it-all-with-github-actionshttpsgithubcomfeaturesactions-for-free-nav`)" id=we-will-automate-it-all-with-github-actionshttpsgithubcomfeaturesactions-for-free-nav>
+We will automate it all with GitHub Actions for free
+</a>
+</li>
+<ul>
+<li>
+<a href=#for-the-contents-i-propose-a-selection-of-poemshttpstinyurlcompoems-b2021 onclick="onNavClick(`#for-the-contents-i-propose-a-selection-of-poemshttpstinyurlcompoems-b2021-nav`)" id=for-the-contents-i-propose-a-selection-of-poemshttpstinyurlcompoems-b2021-nav>
+For the contents, I propose a selection of poems.
+</a>
+</li>
+</ul>
+</ul>
+<li>
+<a href=#workshop-2 onclick="onNavClick(`#workshop-2-nav`)" id=workshop-2-nav>
+Workshop
+</a>
+</li>
+<li>
+<a href=#get-your-computers onclick="onNavClick(`#get-your-computers-nav`)" id=get-your-computers-nav>
+Get your computers
+</a>
+</li>
+<li>
+<a href=#workshop-3 onclick="onNavClick(`#workshop-3-nav`)" id=workshop-3-nav>
+Workshop
+</a>
+</li>
+<li>
+<a href=#lets-download-tools onclick="onNavClick(`#lets-download-tools-nav`)" id=lets-download-tools-nav>
+Let’s download tools
+</a>
+</li>
+<ul>
+<li>
+<a href=#create-a-github-repository-for-your-website onclick="onNavClick(`#create-a-github-repository-for-your-website-nav`)" id=create-a-github-repository-for-your-website-nav>
+Create a GitHub repository for your website
+</a>
+</li>
+</ul>
+<li>
+<a href=#if-you-dont-have-a-github-account onclick="onNavClick(`#if-you-dont-have-a-github-account-nav`)" id=if-you-dont-have-a-github-account-nav>
+If you don’t have a GitHub account
+</a>
+</li>
+<li>
+<a href=#create-a-local-repository onclick="onNavClick(`#create-a-local-repository-nav`)" id=create-a-local-repository-nav>
+Create a local repository
+</a>
+</li>
+<li>
+<a href=#bootstrapping-hugo onclick="onNavClick(`#bootstrapping-hugo-nav`)" id=bootstrapping-hugo-nav>
+Bootstrapping Hugo
+</a>
+</li>
+<ul>
+<li>
+<a href=#open-the-newly-created-folder-in-your-ide onclick="onNavClick(`#open-the-newly-created-folder-in-your-ide-nav`)" id=open-the-newly-created-folder-in-your-ide-nav>
+Open the newly created folder in your IDE.
+</a>
+</li>
+<li>
+<a href=#open-a-terminal-in-that-directory-vs-code-right-click---open-in-integrated-terminal onclick="onNavClick(`#open-a-terminal-in-that-directory-vs-code-right-click---open-in-integrated-terminal-nav`)" id=open-a-terminal-in-that-directory-vs-code-right-click---open-in-integrated-terminal-nav>
+Open a terminal in that directory (VS Code: right click -> open in integrated terminal)
+</a>
+</li>
+<li>
+<a href=#run-this-simple-command onclick="onNavClick(`#run-this-simple-command-nav`)" id=run-this-simple-command-nav>
+Run this simple command
+</a>
+</li>
+</ul>
+<li>
+<a href=#install-a-hugo-theme-skin onclick="onNavClick(`#install-a-hugo-theme-skin-nav`)" id=install-a-hugo-theme-skin-nav>
+Install a Hugo theme (skin)
+</a>
+</li>
+<li>
+<a href=#install-the-diary-theme onclick="onNavClick(`#install-the-diary-theme-nav`)" id=install-the-diary-theme-nav>
+Install the Diary theme
+</a>
+</li>
+<ul>
+<li>
+<a href=#in-the-terminal-run-the-following-command onclick="onNavClick(`#in-the-terminal-run-the-following-command-nav`)" id=in-the-terminal-run-the-following-command-nav>
+In the terminal, run the following command
+</a>
+</li>
+<li>
+<a href=#tweak-the-configtoml-file onclick="onNavClick(`#tweak-the-configtoml-file-nav`)" id=tweak-the-configtoml-file-nav>
+Tweak the config.toml file
+</a>
+</li>
+</ul>
+<li>
+<a href=#lets-see-how-it-looks onclick="onNavClick(`#lets-see-how-it-looks-nav`)" id=lets-see-how-it-looks-nav>
+Let’s see how it looks
+</a>
+</li>
+<li>
+<a href=#publish-the-code onclick="onNavClick(`#publish-the-code-nav`)" id=publish-the-code-nav>
+Publish the code
+</a>
+</li>
+<ul>
+<li>
+<a href=#committing onclick="onNavClick(`#committing-nav`)" id=committing-nav>
+Committing
+</a>
+</li>
+</ul>
+<li>
+<a href=#publish-the-code-1 onclick="onNavClick(`#publish-the-code-1-nav`)" id=publish-the-code-1-nav>
+Publish the code
+</a>
+</li>
+<ul>
+<li>
+<a href=#pushing onclick="onNavClick(`#pushing-nav`)" id=pushing-nav>
+Pushing
+</a>
+</li>
+</ul>
+<li>
+<a href=#publishing-the-website-in-its-true-form onclick="onNavClick(`#publishing-the-website-in-its-true-form-nav`)" id=publishing-the-website-in-its-true-form-nav>
+Publishing the website in its true form
+</a>
+</li>
+<li>
+<a href=#actually-seeing-the-website onclick="onNavClick(`#actually-seeing-the-website-nav`)" id=actually-seeing-the-website-nav>
+Actually seeing the website
+</a>
+</li>
+<li>
+<a href=#adding-contents onclick="onNavClick(`#adding-contents-nav`)" id=adding-contents-nav>
+Adding contents
+</a>
+</li>
+<ul>
+<li>
+<a href=#an-about-me-page onclick="onNavClick(`#an-about-me-page-nav`)" id=an-about-me-page-nav>
+An about me page
+</a>
+</li>
+</ul>
+<li>
+<a href=#adding-moar-contents onclick="onNavClick(`#adding-moar-contents-nav`)" id=adding-moar-contents-nav>
+Adding moar contents
+</a>
+</li>
+<ul>
+<li>
+<a href=#queer-and-feminist-poems onclick="onNavClick(`#queer-and-feminist-poems-nav`)" id=queer-and-feminist-poems-nav>
+Queer and feminist poems
+</a>
+</li>
+</ul>
+<li>
+<a href=#going-further onclick="onNavClick(`#going-further-nav`)" id=going-further-nav>
+Going further
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<transition name=fade>
+<div id=drawer-mask v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if=isDrawerOpen v-on:click=toggleDrawer></div>
+</transition>
+<nav id=navBar class="navbar sticky-top navbar-light single-column-nav-container">
+<div id=navBackground class=nav-background></div>
+<div class="container container-narrow nav-content">
+<button id=nav_dropdown_btn class=nav-dropdown-toggle type=button v-on:click=toggleDrawer>
+<i class=material-icons>
+menu
+</i>
+</button>
+<a id=navTitle class=navbar-brand href=https://matchaxnb.github.io/berlin-1121-slides/>
+Berlin Netlify-sennder slides and demo
+</a>
+<button type=button class=nav-darkmode-toggle id=darkModeToggleButton2>
+<i class=material-icons id=darkModeToggleIcon2>
+dark_mode
+</i>
+</button>
+</div>
+</nav>
+<div class=single-column-header-container id=pageHead v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+<a href=https://matchaxnb.github.io/berlin-1121-slides/>
+<div class=single-column-header-title>Berlin Netlify-sennder slides and demo</div>
+</a>
+</div>
+<div id=content>
+<div id=streamContainer class=stream-container>
+<div class="post-list-container post-list-container-shadow">
+<div class=post>
+<div class=post-head-wrapper-text-only>
+<div class=post-title>
+<div class=post-meta>
+</div>
+</div>
+</div>
+<div class=post-body-wrapper>
+<div class=post-body v-pre>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=workshop>Workshop</h1>
+<h1 id=build-your-own-website>Build Your Own Website</h1>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=workshop-1>Workshop</h1>
+<h2 id=were-all-gonna-create-an-open-source-personal-website>We&rsquo;re all gonna create an open source personal website</h2>
+<h2 id=we-will-build-it-with-hugohttpsgohugoio-a-static-website-generator>We will build it with <a href=https://gohugo.io/>Hugo</a>, a static website generator</h2>
+<h2 id=we-will-host-it-on-github-pageshttpspagesgithubcom-for-free>We will host it on <a href=https://pages.github.com/>GitHub Pages</a> for free</h2>
+<h2 id=we-will-automate-it-all-with-github-actionshttpsgithubcomfeaturesactions-for-free>We will automate it all with <a href=https://github.com/features/actions>GitHub Actions</a> for free</h2>
+<h3 id=for-the-contents-i-propose-a-selection-of-poemshttpstinyurlcompoems-b2021>For the contents, I propose a <a href=https://tinyurl.com/poems-b2021>selection of poems</a>.</h3>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=workshop-2>Workshop</h1>
+<h1 id=get-your-computers>Get your computers</h1>
+<p>If you don&rsquo;t have one or you don&rsquo;t feel like going through all the steps, the instructions will be available online so you can do it from home.</p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=workshop-3>Workshop</h1>
+<h1 id=lets-download-tools>Let&rsquo;s download tools</h1>
+<p>Please download Hugo from <a href=https://gohugo.io>https://gohugo.io</a>
+<figure><img src=gohugoqr.png height=200>
+</figure>
+</p>
+<p>Please install Git on your computer if that&rsquo;s not done.</p>
+<p>Optionally, install GitHub Desktop from <a href=https://desktop.github.com/>https://desktop.github.com/</a>.</p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h2 id=create-a-github-repository-for-your-website>Create a GitHub repository for your website</h2>
+<p>Connect to GitHub.com and just do that!</p>
+<p>The repository needs to be named <code>&lt;YourUsername>.github.io</code> for GitHub Pages to work.
+<figure><img src=new-repo.png height=200>
+</figure>
+</p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=if-you-dont-have-a-github-account>If you don&rsquo;t have a GitHub account</h1>
+<p>Create one for free <em>and download GitHub Desktop and VS Code</em>.</p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=create-a-local-repository>Create a local repository</h1>
+<p>Using GitHub Desktop, it&rsquo;s very straightforward</p>
+<p>Using the CLI it&rsquo;s something like</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git init yourusername.github.io --initial-branch<span style=color:#f92672>=</span>main
+cd yourusername.github.io
+git remote add origin git@github.com:yourusername/yourusername.github.io
+</code></pre></div><hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=bootstrapping-hugo>Bootstrapping Hugo</h1>
+<h2 id=open-the-newly-created-folder-in-your-ide>Open the newly created folder in your IDE.</h2>
+<h2 id=open-a-terminal-in-that-directory-vs-code-right-click---open-in-integrated-terminal>Open a terminal in that directory (VS Code: right click -> open in integrated terminal)</h2>
+<h2 id=run-this-simple-command>Run this simple command</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new site . --force
+</code></pre></div><hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=install-a-hugo-theme-skin>Install a Hugo theme (skin)</h1>
+<p>We will install the Diary theme</p>
+<figure><img src=diary-hugo.png height=300>
+</figure>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=install-the-diary-theme>Install the Diary theme</h1>
+<h2 id=in-the-terminal-run-the-following-command>In the terminal, run the following command</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git submodule add https://github.com/AmazingRise/hugo-theme-diary.git themes/diary
+</code></pre></div><h2 id=tweak-the-configtoml-file>Tweak the config.toml file</h2>
+<p>It will look like</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>baseURL</span> = <span style=color:#e6db74>&#39;https://yourusername.github.io/&#39;</span>
+<span style=color:#a6e22e>languageCode</span> = <span style=color:#e6db74>&#39;en-uk&#39;</span>
+<span style=color:#a6e22e>title</span> = <span style=color:#e6db74>&#34;My Poetry blog&#34;</span>
+
+<span style=color:#a6e22e>theme</span> = <span style=color:#e6db74>&#39;diary&#39;</span>
+</code></pre></div><hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=lets-see-how-it-looks>Let&rsquo;s see how it looks</h1>
+<p>In the same terminal, run</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo server -D
+</code></pre></div><p>and open the given link in your web browser. Check it out!</p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=publish-the-code>Publish the code</h1>
+<p>Let&rsquo;s publish the code by committing it and pushing it</p>
+<h2 id=committing>Committing</h2>
+<p>Commiting is writing to the Git history your changes with an explanatory message. Using the terminal, that&rsquo;s a matter of doing</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add .
+git commit -m <span style=color:#e6db74>&#34;first commit for my website&#34;</span>
+</code></pre></div><p>With GitHub Desktop, it&rsquo;s still very straightforward: add all files, and commit them.</p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=publish-the-code-1>Publish the code</h1>
+<h2 id=pushing>Pushing</h2>
+<p>Pushing commits means publishing them to a remote location. Here, we&rsquo;re talking about GitHub.</p>
+<p>With GitHub Desktop, just click the Push button.</p>
+<p>With the CLI, it&rsquo;s</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git push -u origin main
+</code></pre></div><p>The source code to your website is now online! Check it out on your browser.</p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=publishing-the-website-in-its-true-form>Publishing the website in its true form</h1>
+<p>We will add a GitHub Action for Hugo. This will do all the heavy lifting for us.</p>
+<ul>
+<li>Create a folder in your repository .github/workflows/</li>
+<li>Get it from <a href=https://tinyurl.com/berlin-hugo>https://tinyurl.com/berlin-hugo</a>.</li>
+<li>Save this file to .github/workflows/gh-pages.yml</li>
+<li>Commit, push</li>
+</ul>
+<p>See the magic happen in the Actions tab of your repository on GitHub.</p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=actually-seeing-the-website>Actually seeing the website</h1>
+<p>Since we are doing the GitHub Action for the first time, we need to turn on the GitHub Pages feature.</p>
+<ul>
+<li>Go to your repository&rsquo;s Settings tab on GitHub</li>
+<li>Click the Pages tab on the left menu</li>
+<li>Pick the Source for GitHub Pages as branch gh-pages and click Save.</li>
+<li>That&rsquo;s it! Your website will appear online after a few seconds on <code>https://&lt;YourUsername>.github.io</code></li>
+</ul>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=adding-contents>Adding contents</h1>
+<h2 id=an-about-me-page>An about me page</h2>
+<p>From the terminal:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo new about-me/index.md
+</code></pre></div><p>Remove the <code>draft: true</code> mention and just type your blog in markdown.</p>
+<p>Commit, push, see it online!</p>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=adding-moar-contents>Adding moar contents</h1>
+<h2 id=queer-and-feminist-poems>Queer and feminist poems</h2>
+<ul>
+<li>Create a <code>contents/posts</code> folder in your repository</li>
+<li>Pick some from <a href=https://tinyurl.com/poems-b2021>https://tinyurl.com/poems-b2021</a>.</li>
+<li>Save them (raw form) under the newly created folder.</li>
+<li>Commit, push, see it online.</li>
+</ul>
+<hr>
+<section data-noprocess data-shortcode-slide data-background=#ebc83f data-transition=convex data-template=devops_ws>
+<h1 id=going-further>Going further</h1>
+<p>Connect with your peers, star their GitHub repository, then maybe add a link to their website in your repository and open a pull request so they add yours. A lot of things happen in the DevOps world through cooperation, keep that in mind.</p>
+<p>DevOps takes its roots into the Agile movement, and Agile people are fond of Open Source in general. The entire ecosystem is shaped by it.</p>
+</div>
+</div>
+<nav class=post-pagination>
+<a class=newer-posts href=https://matchaxnb.github.io/berlin-1121-slides/slides/what-is-devops/>
+Next<br>
+</a>
+<a class=older-posts href=https://matchaxnb.github.io/berlin-1121-slides/slides/quiz-time/>
+Previous<br>
+</a>
+</nav>
+<div class=post-comment-wrapper>
+</div>
+</div>
+</div>
+</div>
+</div><div id=single-column-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+2021 Berlin Netlify-sennder slides and demo
+</div>
+</div>
+<script src=/berlin-1121-slides/js/journal.js></script>
+</body>
+</html>
